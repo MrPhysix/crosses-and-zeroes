@@ -1,0 +1,73 @@
+.App {
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3c197;
+}
+.gameStatus {
+  margin: 0;
+  padding: 0;
+  grid-area: 1 / 1 / 2 / 4;
+  font-size: 36px;
+  color: green;
+  font-weight: bold;
+}
+
+.appOptions {
+  grid-area: 1 / 1 / 2 / 2;
+  font-size: 24px;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionsInner {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.appContainer {
+  grid-area: 1 / 2 / 2 / 3;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.3fr repeat(3, 1fr) 0.3fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  background-color: black;
+  justify-items: center;
+  padding: 15px;
+}
+
+.appResetButton {
+  grid-area: 5 / 1 / 6 / 4;
+}
+
+.appHistory {
+  width: 100%;
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.appHistory button {
+  width: 30%;
+}
+.playersTitleRow {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 20px;
+}
