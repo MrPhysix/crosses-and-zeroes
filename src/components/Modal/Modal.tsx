@@ -1,10 +1,18 @@
-import React, { useEffect, useState } from "react";
-import * as styles from "./modal.module.css";
-import Button from "../Button/Button";
-import xImage from "../../images/x.svg";
-import oImage from "../../images/o.svg";
+import React, { useEffect, useState } from 'react';
+import styles from './modal.module.css';
+import Button from '../Button/Button';
+import xImage from '@images/x.svg';
+import oImage from '@images/o.svg';
 
-export default function Modal({ eventState, winner }) {
+interface ModalProps {
+  eventState?: boolean;
+  winner?: boolean | null;
+}
+
+export default function Modal({
+  eventState,
+  winner,
+}: ModalProps): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnClose = () => {
@@ -39,16 +47,16 @@ export default function Modal({ eventState, winner }) {
           {winner !== null ? (
             <>
               {displayedImg}
-              {`Player ${winner ? "1" : "2"} claims the win! `}
+              {`Player ${winner ? '1' : '2'} claims the win! `}
             </>
           ) : (
             "No winners today, just two great players! It's a tie!"
           )}
         </p>
         <Button
-          text={"Close Modal"}
+          text={'Close Modal'}
           handleOnClick={handleOnClose}
-          color={"green"}
+          color={'green'}
           isActive={true}
         />
       </div>

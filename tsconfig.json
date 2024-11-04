@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@utils/*": ["utils/*"],
+      "@components/*": ["components/*"],
+      "@images/*": ["images/*"]
+    },
+    "sourceMap": true,
+    "lib": ["esnext", "DOM"]
+  },
+  "include": ["src/**/*", "src/utils/types/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
